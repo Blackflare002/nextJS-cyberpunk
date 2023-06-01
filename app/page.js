@@ -8,9 +8,9 @@ const Homepage = () => {
 	useEffect(() => {
 		const fetchItems = async () => {
 			const res = await fetch("/api/items");
-			console.log("res: ", res);
+			// console.log("res: ", res);
 			const data = await res.json();
-			console.log("Data: ", data);
+			// console.log("Data: ", data);
 			setItems(data);
 		};
 		fetchItems();
@@ -18,7 +18,9 @@ const Homepage = () => {
 
 	return (
 		<>
-			<Items items={items} />
+			<ul>
+				<Items items={items} />
+			</ul>
 		</>
 	);
 };
