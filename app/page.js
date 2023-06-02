@@ -19,7 +19,16 @@ const Homepage = () => {
 	return (
 		<>
 			<ul>
-				<Items items={items} />
+				<div>
+					{items.map((item) => (
+						<Items
+							key={Math.floor(
+								Math.random() * 4206969
+							)}
+							items={item}
+						/>
+					))}
+				</div>
 			</ul>
 		</>
 	);

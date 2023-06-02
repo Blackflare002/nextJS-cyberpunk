@@ -1,0 +1,101 @@
+.styledLi {
+	list-style-type: none;
+}
+
+.styledImg {
+	border-radius: 25px;
+	height: 80px;
+	margin-bottom: 20px;
+	/* border: 2px solid red; */
+}
+
+@keyframes glow {
+	from {
+		box-shadow: none;
+	}
+	to {
+		box-shadow: 0 0 7px #fff, 0 0 10px #fff,
+			0 0 21px #0fa, 0 0 42px #0fa;
+	}
+}
+
+.itemContainer {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	width: 250px;
+	height: 350px;
+	padding: 20px;
+	background-color: grey;
+	border-radius: 10px;
+	animation: glow 1s ease-in-out reverse forwards;
+}
+
+.styledItemPrice {
+	font-size: large;
+	color: lightgrey;
+}
+
+.styledItemName {
+	font-weight: bold;
+	color: lightgrey;
+	text-align: center;
+	line-height: 1.5;
+	overflow-wrap: anywhere;
+}
+
+.itemInnerBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.itemInnerBox div {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.OOSRibbon {
+	color: #ff5b9d;
+	font-family: "RevampedFont";
+	font-size: 1.5rem;
+	position: relative;
+	text-decoration: underline;
+	text-underline-offset: 5px;
+	text-shadow: 0 0 7px #ff0066, 0 0 3px #ff0066,
+		0 0 12px #ff0066;
+	top: 15%;
+	left: 1%;
+	width: fit-content;
+	transform: rotate(-6deg);
+	margin: 0;
+	padding: 0;
+}
+
+.priceAndBtn {
+	justify-content: space-between;
+	height: 70px;
+}
+
+.styledButton {
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 12px;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+}
+
+.styledButton:hover {
+	box-shadow: 0 0 7px #fff, 0 0 3px #0fa,
+		0 0 12px #0fa;
+}
+
+.styledButton:hover[prop-isInStock="false"] {
+	box-shadow: 0 0 7px #fff, 0 0 3px #ff0066,
+		0 0 12px #ff0066;
+}
