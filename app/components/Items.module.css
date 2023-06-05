@@ -31,6 +31,10 @@
 	animation: glow 1s ease-in-out reverse forwards;
 }
 
+.itemContainer:hover {
+	animation: glow 1s ease-in-out forwards;
+}
+
 .styledItemPrice {
 	font-size: large;
 	color: lightgrey;
