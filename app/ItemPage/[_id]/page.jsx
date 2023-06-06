@@ -1,3 +1,6 @@
+import style from "./page.module.css";
+import "../../styles/fonts.css";
+
 const ItemInfo = ({ params }) => {
 	return (
 		<div>

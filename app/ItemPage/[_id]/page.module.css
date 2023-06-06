@@ -1,0 +1,244 @@
+.Wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-image: url("../../../public/images/grid.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.ItemWrapper {
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	max-width: 1000px;
+	height: 500px;
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	background-color: black;
+	border-radius: 10px;
+	padding: 30px;
+	color: #fff;
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff,
+		0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe,
+		0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.ItemImage {
+	display: flex;
+	justify-content: center;
+	width: 400px;
+	height: 400px;
+	padding: 10px;
+	align-items: center;
+}
+
+.Image {
+	width: 350px;
+	height: 350px;
+	border-radius: 10px;
+	box-shadow: 0 3px 10px whitesmoke;
+}
+
+.ItemInfo {
+	width: 75%;
+	height: 300px;
+}
+
+.ItemDescription {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+}
+
+.ItemName {
+	margin: 0;
+	font-family: "sans-serif";
+	font-size: 32px;
+	color: lightgrey;
+}
+
+.Category {
+	margin: 0;
+	font-family: "sans-serif";
+	font-size: 18px;
+	font-style: italic;
+	color: lightgrey;
+}
+
+.BodyLocation {
+	margin: 0;
+	font-family: "sans-serif";
+	color: lightgrey;
+}
+
+.Stock {
+	margin: 0;
+	font-family: "sans-serif";
+	font-size: 18px;
+	color: lightgrey;
+}
+
+.Price {
+	text-decoration: underline;
+	text-underline-offset: 15px;
+	margin: 0;
+	font-family: "sans-serif";
+	font-size: 24px;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff,
+		0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa,
+		0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+.PurchaseSection {
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+.ItemAvailability {
+	width: 150px;
+	height: 100px;
+	color: lightgrey;
+	display: flex;
+	align-items: center;
+}
+
+.ItemPrice {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 30px;
+}
+
+.CompanyInfoWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	height: 100px;
+	gap: 140px;
+}
+
+.CompanyInfo {
+	text-align: center;
+	text-decoration: none;
+	background-color: var(--realDarkGrey);
+	color: whitesmoke;
+	min-width: 150px;
+	border: solid white 1px;
+	padding: 10px;
+	box-shadow: 0 3px 10px whitesmoke;
+	border-radius: 10px;
+}
+
+.CompanyInfo:hover {
+	transition: box-shadow 0.5s ease-in-out;
+	box-shadow: 0 0 7px #fff, 0 0 10px #fff,
+		0 0 21px #0fa, 0 0 42px #0fa;
+}
+
+.CompanyName {
+	margin: 0;
+	font-family: "sans-serif";
+	font-size: 20px;
+}
+
+.Country {
+	margin: 0;
+	font-family: "sans-serif";
+	font-style: italic;
+}
+
+.Button {
+	width: 200px;
+	height: 60px;
+	line-height: 20px;
+	border: 0;
+	border-radius: 10px;
+	background: transparent;
+	font-family: "TronFont";
+	font-size: 24px;
+	text-shadow: 0 0 2px #0fa, 0 0 3px #0fa,
+		0 0 5px #0fa, 0 0 5px #0fa, 0 0 10px #0fa,
+		0 0 12px #0fa, 0 0 12px #0fa, 0 0 30px #0fa;
+}
+
+.Button:hover {
+	cursor: pointer;
+	color: whitesmoke;
+	transition: text-shadow 0.1s ease-in-out,
+		box-shadow 0.1s ease-in-out;
+	text-shadow: 0 0 4px whitesmoke,
+		0 0 6px whitesmoke, 0 0 10px whitesmoke,
+		0 0 10px #0fa, 0 0 20px #0fa, 0 0 24px #0fa,
+		0 0 24px #0fa, 0 0 60px #0fa;
+}
+
+.Button:active {
+	transform: translateY(4px);
+}
+
+.Button:disabled {
+	color: #ff5b9d;
+	font-family: "RevampedFont";
+	font-size: 32px;
+	text-decoration: underline;
+	text-underline-offset: 5px;
+	text-shadow: 0 0 4px #ff0066, 0 0 6px #ff0066,
+		0 0 10px #ff0066, 0 0 10px #ff0066,
+		0 0 20px #ff0066, 0 0 24px #ff0066,
+		0 0 24px #ff0066, 0 0 60px #ff0066;
+	padding: 0;
+}
+
+.SubtotalInput {
+	background-color: var(--realDarkGray);
+	/* background-color: #1e1e1e; */
+	font-size: 1.15rem;
+	font-weight: bold;
+	border: solid white 2px;
+	border-radius: 10px;
+	box-shadow: 0 0 7px #fff, 0 0 10px #fff,
+		0 0 21px #fff;
+	text-align: center;
+	height: 40px;
+	width: 50px;
+}
+
+.SubtotalLabel {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	height: 100px;
+}
+
+.SubtotalPrice {
+	font-size: 24px;
+	text-decoration: underline;
+	text-underline-offset: 15px;
+	margin: 0;
+	font-family: "sans-serif";
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff,
+		0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa,
+		0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+.SubtotalWrapper {
+	display: flex;
+	gap: 25px;
+	justify-content: space-between;
+	align-items: center;
+	width: 200px;
+}
