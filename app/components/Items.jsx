@@ -7,7 +7,7 @@ const Items = ({ items }) => {
 			<li className={styles.styledLi}>
 				<div className={styles.itemContainer}>
 					<Link
-						style={styles.styledLink}
+						className={styles.styledLink}
 						href={`/ItemPage/${items._id}`}
 					>
 						<div className={styles.itemInnerBox}>
@@ -47,8 +47,25 @@ const Items = ({ items }) => {
 								</p>
 								<button
 									className={styles.styledButton}
+									onClick={(ev) => {
+										ev.preventDefault();
+										ev.stopPropagation();
+										// addItemToCart(item);
+									}}
+									disabled={
+										items.numInStock === 0
+											? true
+											: false
+									}
+									isInStock={
+										items.numInStock > 0
+											? "true"
+											: "false"
+									}
 								>
-									Add to Cart
+									{items.numInStock > 0
+										? "Add to Cart"
+										: "Sold out"}
 								</button>
 							</div>
 						</div>

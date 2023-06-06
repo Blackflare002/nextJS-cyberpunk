@@ -100,12 +100,22 @@
 	transition: all 200ms ease-in-out;
 }
 
-.styledButton:hover {
+.styledButton[isInStock="false"] {
+	background-color: grey;
+	color: black;
+	cursor: not-allowed;
+	border: 2px solid black;
+}
+
+.styledButton:hover[isInStock="true"] {
 	box-shadow: 0 0 7px #fff, 0 0 3px #0fa,
 		0 0 12px #0fa;
 }
 
-.styledButton:hover[prop-isInStock="false"] {
-	box-shadow: 0 0 7px #fff, 0 0 3px #ff0066,
-		0 0 12px #ff0066;
+.styledButton:hover[isInStock="false"] {
+	box-shadow: 0 0 14px #fff, 0 0 6px red,
+		0 0 24px red;
+	background-color: grey;
+	color: black;
+	cursor: not-allowed;
 }
