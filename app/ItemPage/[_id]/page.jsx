@@ -5,37 +5,23 @@ import itemsData from "../../api/items/data.json";
 import { useRouter } from "next/router";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import data from "../../api/items/data.json";
 
 const ItemInfo = ({ params }) => {
-	const [items, setItems] = useState([]);
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const response = await fetch(
-					"../../api/items/data.json"
-				);
-				const data = await response.json();
-				setItems(data);
-			} catch (error) {
-				console.error(
-					"Error fetching data:",
-					error
-				);
-			}
-		};
-		fetchData();
-	}, []);
-	const router = useRouter();
-	const { _id } = router.query;
-	// const { _id } = params._id;
-	// const searchParams = useSearchParams();
-	// const search = searchParams.get(_id);
-	const selectedItem = items.find(
-		(el) => el._id === _id
+	const item = data.find(
+		(el) => el._id === Number(params._id)
 	);
+	// console.log("Params: ", Number(params._id));
+	// console.log(
+	// 	"Data 0: ",
+	// 	data.find(
+	// 		(el) => el._id === Number(params._id)
+	// 	)
+	// );
+	// console.log("Item: ", item);
 	return (
 		<div>
-			<h1>{selectedItem.name}</h1>
+			<h1>{item.name}</h1>
 			<div>{params._id}</div>
 			<p>PAGE</p>
 		</div>
