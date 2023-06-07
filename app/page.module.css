@@ -1,3 +1,7 @@
+.wrapper {
+	background-color: black;
+}
+
 .hero {
 	display: flex;
 	justify-content: center;

@@ -19,7 +19,7 @@ const Homepage = () => {
 	}, []);
 
 	return (
-		<>
+		<div className={styles.wrapper}>
 			<div className={styles.hero}>
 				<div>
 					<h1
@@ -49,7 +49,7 @@ const Homepage = () => {
 					</div>
 				</ul>
 			</div>
-		</>
+		</div>
 	);
 };
 
