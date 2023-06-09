@@ -57,7 +57,7 @@ const Items = ({ items }) => {
 											? true
 											: false
 									}
-									isInStock={
+									isinstock={
 										items.numInStock > 0
 											? "true"
 											: "false"
