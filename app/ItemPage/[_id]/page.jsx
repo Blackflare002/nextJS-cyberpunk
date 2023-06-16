@@ -4,19 +4,33 @@ import "../../styles/fonts.css";
 import data from "../../api/items/data.json";
 import companyData from "../../api/companies/companies.json";
 import bgImg from "../../../public/images/grid.jpg";
+import { useState } from "react";
 
 const ItemInfo = ({ params }) => {
 	const item = data.find(
 		(el) => el._id === Number(params._id)
 	);
+
 	const bodyPart = item
 		? item.body_location
 		: null;
+
 	const company = item
 		? companyData.find(
 				(el) => el._id === Number(item.companyId)
 		  )
 		: null;
+
+	const [numOfItems, setNumOfItems] = useState(1);
+
+	const handleInputChange = (e) => {
+		let newValue = e.target.value;
+		if (e.target.value <= 1) {
+			newValue = 1;
+		} else if (e.target.value >= item.numInStock)
+			newValue = item.numInStock;
+		setNumOfItems(newValue);
+	};
 	// console.log("image: ", bgImg.src);
 	// console.log("Company: ", company);
 	// console.log("id: ", Number(item.companyId));
@@ -120,6 +134,7 @@ const ItemInfo = ({ params }) => {
 												>
 													Subtotal:{" "}
 												</div>
+
 												<input
 													className={
 														style.subtotalInput
@@ -127,8 +142,26 @@ const ItemInfo = ({ params }) => {
 													min={1}
 													max={item.numInStock}
 													type="number"
-													value={1}
-												></input>
+													value={numOfItems}
+													onChange={
+														handleInputChange
+													}
+												/>
+												<p
+													className={
+														style.subtotalPrice
+													}
+												>
+													$
+													{Number(
+														numOfItems *
+															Number(
+																item.price.slice(
+																	1
+																)
+															)
+													).toFixed(2)}
+												</p>
 											</div>
 										</div>
 									</div>
