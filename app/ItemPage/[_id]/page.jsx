@@ -35,7 +35,6 @@ const ItemInfo = ({ params }) => {
 					<div
 						style={{
 							backgroundImage: `url(${bgImg.src})`,
-							// zIndex: 5,
 							position: "relative",
 							height: "100vh",
 							width: "100vw",
@@ -109,6 +108,28 @@ const ItemInfo = ({ params }) => {
 											<p className={style.price}>
 												{item.price}
 											</p>
+											<div
+												className={
+													style.subtotalWrapper
+												}
+											>
+												<div
+													className={
+														style.subtotalLabel
+													}
+												>
+													Subtotal:{" "}
+												</div>
+												<input
+													className={
+														style.subtotalInput
+													}
+													min={1}
+													max={item.numInStock}
+													type="number"
+													value={1}
+												></input>
+											</div>
 										</div>
 									</div>
 									<div

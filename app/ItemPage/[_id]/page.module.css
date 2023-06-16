@@ -56,14 +56,14 @@
 
 .itemName {
 	margin: 0;
-	font-family: "sans-serif";
+	/* font-family: sans-serif; */
 	font-size: 32px;
 	color: lightgrey;
 }
 
 .category {
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	font-size: 18px;
 	font-style: italic;
 	color: lightgrey;
@@ -71,13 +71,13 @@
 
 .bodyLocation {
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	color: lightgrey;
 }
 
 .stock {
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	font-size: 18px;
 	color: lightgrey;
 }
@@ -86,7 +86,7 @@
 	text-decoration: underline;
 	text-underline-offset: 15px;
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	font-size: 24px;
 	text-shadow: 0 0 7px #fff, 0 0 10px #fff,
 		0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa,
@@ -146,13 +146,13 @@
 
 .companyName {
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	font-size: 20px;
 }
 
 .country {
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	font-style: italic;
 }
 
@@ -224,7 +224,7 @@
 	text-decoration: underline;
 	text-underline-offset: 15px;
 	margin: 0;
-	font-family: "sans-serif";
+	font-family: sans-serif;
 	text-shadow: 0 0 7px #fff, 0 0 10px #fff,
 		0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa,
 		0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
