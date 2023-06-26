@@ -1,0 +1,45 @@
+.Dashed {
+	margin: 0 10px;
+	border-bottom: dashed #a6ffe1 2px;
+	box-shadow: 1px 1px 7px #0fa, 0 0 10px #0fa,
+		0 0 21px #0fa, 0 0 42px #0fa, 0 0 82px #0fa,
+		0 0 92px #0fa;
+	flex: 1;
+	height: 1px;
+	position: relative;
+	top: 12px;
+}
+
+.Item {
+	display: flex;
+	font-size: 0.6rem;
+	justify-content: space-between;
+	line-height: 16px;
+	margin-bottom: 16px;
+	width: 100%;
+}
+
+.Title {
+	font-size: 1rem;
+}
+
+.Wrapper {
+	background-color: #131313;
+	border-radius: 12%;
+	border: 10px black solid;
+	padding: 35px;
+	margin-top: 150px;
+	align-self: center;
+	text-shadow: 0 0 7px #0fa, 0 0 10px #0fa,
+		0 0 21px #0fa, 0 0 42px #0fa, 0 0 82px #0fa,
+		0 0 92px #0fa;
+	box-shadow: -5px 5px 5px #00ffaa4c,
+		-5px 6px 8px #00ffaa36,
+		-2px 3px 10px #00ffaa5a;
+	transform: rotate(8deg) skew(15deg, -8deg);
+	width: 40%;
+}
+
+.Wrapper * {
+	font-family: "Press Start 2P", cursive;
+}

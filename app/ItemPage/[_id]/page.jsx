@@ -190,11 +190,20 @@ const ItemInfo = ({ params }) => {
 											</p>
 										</a>
 										<div>
-											<button
-												className={style.button}
-											>
-												Add to Cart
-											</button>
+											{item.numInStock !== 0 ? (
+												<button
+													className={style.button}
+												>
+													Add to Cart
+												</button>
+											) : (
+												<button
+													className={style.button}
+													disabled={true}
+												>
+													Sold Out
+												</button>
+											)}
 										</div>
 									</div>
 								</div>
