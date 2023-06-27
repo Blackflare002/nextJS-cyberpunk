@@ -1,7 +1,13 @@
+import { useContext, useState } from "react";
 import styles from "./Items.module.css";
 import Link from "next/link";
+import { AppContext } from "./AppContext";
 
 const Items = ({ items }) => {
+	const {
+		// items,
+		actions: { addItemToCart },
+	} = useContext(AppContext);
 	return (
 		<div>
 			<li className={styles.styledLi}>
@@ -50,7 +56,7 @@ const Items = ({ items }) => {
 									onClick={(ev) => {
 										ev.preventDefault();
 										ev.stopPropagation();
-										// addItemToCart(item);
+										addItemToCart(items);
 									}}
 									disabled={
 										items.numInStock === 0
