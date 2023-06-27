@@ -1,30 +1,35 @@
 import { useContext } from "react";
 import { AppContext } from "./AppContext";
+import styles from "./Confirm.module.css";
 
 const Confirm = () => {
 	const { completedOrder } =
 		useContext(AppContext);
 	return (
-		<div className="Wrapper">
+		<div className={styles.Wrapper}>
 			{completedOrder && (
 				<>
 					<div>
 						<ul>
-							<li className="Item">
-								<span className="Title">
+							<li className={styles.Item}>
+								<span className={styles.Title}>
 									Order completed
 								</span>
-								<div className="Dashed"></div>
+								<div
+									className={styles.Dashed}
+								></div>
 								<span>.</span>
 							</li>
-							<li className="Item">
+							<li className={styles.Item}>
 								<span>.</span>
-								<div className="Dashed"></div>
+								<div
+									className={styles.Dashed}
+								></div>
 								<span>.</span>
 							</li>
 							{completedOrder.items.map((el) => {
 								return (
-									<li className="Item">
+									<li className={styles.Item}>
 										<span>{el.name}</span>
 										{el.numPurchased > 1 && (
 											<span
@@ -36,7 +41,9 @@ const Confirm = () => {
 												x{item.numPurchased}
 											</span>
 										)}
-										<div className="Dashed"></div>
+										<div
+											className={styles.Dashed}
+										></div>
 										<span>
 											$
 											{(
@@ -47,12 +54,14 @@ const Confirm = () => {
 									</li>
 								);
 							})}
-							<li className="Item">
+							<li className={styles.Item}>
 								<span>.</span>
-								<div className="Dashed"></div>
+								<div
+									className={styles.Dashed}
+								></div>
 								<span>.</span>
 							</li>
-							<li className="Item">
+							<li className={styles.Item}>
 								<span>.</span>
 								<Dashed></Dashed>
 								<span
