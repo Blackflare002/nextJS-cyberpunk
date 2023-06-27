@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Items from "./components/Items";
 import styles from "./page.module.css";
 import "./styles/fonts.css";
+import { AppContext } from "./AppContext";
 
 const Homepage = () => {
 	const [items, setItems] = useState([]);

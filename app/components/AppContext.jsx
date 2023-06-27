@@ -297,16 +297,16 @@ export const AppContextProvider = ({
 	);
 
 	// fetch items from db on load
-	useEffect(() => {
-		setStatusLoading();
-		fetch("/items")
-			.then((res) => res.json())
-			.then((data) => {
-				setStatusIdle();
-				getItems(data.items);
-			})
-			.catch((err) => setStatusError(err));
-	}, []);
+	// useEffect(() => {
+	// 	setStatusLoading();
+	// 	fetch("/items")
+	// 		.then((res) => res.json())
+	// 		.then((data) => {
+	// 			setStatusIdle();
+	// 			getItems(data.items);
+	// 		})
+	// 		.catch((err) => setStatusError(err));
+	// }, []);
 
 	// use cart in sessionStorage on load if it exists
 	useEffect(() => {
