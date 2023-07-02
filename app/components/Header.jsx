@@ -1,9 +1,15 @@
+"use client";
 import style from "./Header.module.css";
 import Link from "next/link";
 import logo from "../../public/images/logo.jpg";
 import { RiShoppingCartLine } from "react-icons/ri";
+import { useContext } from "react";
+import { AppContext } from "./AppContext";
 
 const Header = () => {
+	const {
+		cart: { items, totalCost, size },
+	} = useContext(AppContext);
 	return (
 		<div className={style.glow}>
 			<header className={style.wrapper}>
@@ -32,7 +38,7 @@ const Header = () => {
 					>
 						<div className={style.cartBox}>
 							<span className={style.cartSize}>
-								X
+								{size}
 							</span>
 							<RiShoppingCartLine />
 							<span>Cart</span>
