@@ -2,6 +2,10 @@ import { useContext, useState } from "react";
 import styles from "./Items.module.css";
 import Link from "next/link";
 import { AppContext } from "./AppContext";
+import {
+	addToCart,
+	removeFromCart,
+} from "./Cart/TrueCart";
 
 const Items = ({ items }) => {
 	const {
@@ -56,7 +60,9 @@ const Items = ({ items }) => {
 									onClick={(ev) => {
 										ev.preventDefault();
 										ev.stopPropagation();
-										addItemToCart(items);
+										// addItemToCart(items);
+										addToCart(product);
+										removeFromCart(productId);
 									}}
 									disabled={
 										items.numInStock === 0

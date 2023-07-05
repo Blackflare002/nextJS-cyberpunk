@@ -1,8 +1,7 @@
 "use client";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem";
 
 const Cart = () => {
