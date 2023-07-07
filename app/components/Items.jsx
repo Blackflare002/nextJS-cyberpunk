@@ -2,16 +2,24 @@ import { useContext, useState } from "react";
 import styles from "./Items.module.css";
 import Link from "next/link";
 import { AppContext } from "./AppContext";
-import {
-	addToCart,
-	removeFromCart,
-} from "./Cart/TrueCart";
+import { CartContext } from "./CartContext";
+// import {
+// 	addToCart,
+// 	removeFromCart,
+// } from "./Cart/TrueCart";
 
 const Items = ({ items }) => {
-	const {
-		// items,
-		actions: { addItemToCart },
-	} = useContext(AppContext);
+	// const {
+	// 	// items,
+	// 	actions: { addItemToCart },
+	// } = useContext(AppContext);
+	const { dispatch } = useContext(CartContext);
+	const handleAddToCart = (el) => {
+		dispatch({
+			type: "ADD_TO_CART",
+			payload: el,
+		});
+	};
 	return (
 		<div>
 			<li className={styles.styledLi}>
@@ -61,8 +69,9 @@ const Items = ({ items }) => {
 										ev.preventDefault();
 										ev.stopPropagation();
 										// addItemToCart(items);
-										addToCart(product);
-										removeFromCart(productId);
+										// addToCart(product);
+										// removeFromCart(productId);
+										handleAddToCart(el);
 									}}
 									disabled={
 										items.numInStock === 0

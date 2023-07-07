@@ -1,48 +1,27 @@
 "use client";
-import { createContext, useState } from "react";
+import React, {
+	createContext,
+	useReducer,
+} from "react";
+import cartReducer from "./cartReducer";
 
-export const CartContext = createContext();
+const initialState = {
+	cartItems: [],
+};
+
+const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-	// Define cart items state using useState hook
-	const [cartItems, setCartItems] = useState([]);
+	const [state, dispatch] = useReducer(
+		cartReducer,
+		initialState
+	);
 
-	// Define cart actions
-	const addItem = (item) => {
-		setCartItems((prevItems) => [
-			...prevItems,
-			item,
-		]);
-	};
-
-	const removeItem = (itemId) => {
-		setCartItems((prevItems) =>
-			prevItems.filter(
-				(item) => item.id !== itemId
-			)
-		);
-	};
-
-	const clearCart = () => {
-		setCartItems([]);
-	};
-
-	// Create the context value object
-	// const contextValue = {
-	// 	cartItems,
-	// 	addItem,
-	// 	removeItem,
-	// 	clearCart,
-	// };
-
-	// Return the CartContext.Provider
 	return (
 		<CartContext.Provider
 			value={{
-				cartItems,
-				addItem,
-				removeItem,
-				clearCart,
+				cartItems: state.cartItems,
+				dispatch,
 			}}
 		>
 			{children}
@@ -50,4 +29,4 @@ const CartProvider = ({ children }) => {
 	);
 };
 
-export default CartProvider;
+export { CartContext, CartProvider };

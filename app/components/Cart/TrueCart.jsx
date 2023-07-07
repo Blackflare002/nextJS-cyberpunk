@@ -2,23 +2,35 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
+import { CartContext } from "../CartContext";
 import style from "./TrueCart.module.css";
 
 const TrueCart = () => {
-	const [cartItems, setCartItems] = useState([]);
-	const addToCart = (product) => {
-		setCartItems((prevItems) => [
-			...prevItems,
-			product,
-		]);
+	handleRemoveFromCart(itemId);
+	const handleRemoveFromCart = (itemId) => {
+		dispatch({
+			type: "REMOVE_FROM_CART",
+			payload: itemId,
+		});
 	};
-	const removeFromCart = (productId) => {
-		setCartItems((prevItems) =>
-			prevItems.filter(
-				(item) => item._id !== productId //like "items" in page.js, right?
-			)
-		);
+	const handleClearCart = () => {
+		dispatch({ type: "CLEAR_CART" });
 	};
+
+	// const [cartItems, setCartItems] = useState([]);
+	// const addToCart = (product) => {
+	// 	setCartItems((prevItems) => [
+	// 		...prevItems,
+	// 		product,
+	// 	]);
+	// };
+	// const removeFromCart = (productId) => {
+	// 	setCartItems((prevItems) =>
+	// 		prevItems.filter(
+	// 			(item) => item._id !== productId //like "items" in page.js, right?
+	// 		)
+	// 	);
+	// };
 
 	return (
 		<div className={style.Wrapper}>
