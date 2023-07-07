@@ -5,11 +5,13 @@ import logo from "../../public/images/logo.jpg";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useContext } from "react";
 import { AppContext } from "./AppContext";
+import { CartContext } from "./CartContext";
 
 const Header = () => {
-	const {
-		cart: { items, totalCost, size },
-	} = useContext(AppContext);
+	// const {
+	// 	cart: { items, totalCost, size },
+	// } = useContext(AppContext);
+	const { cartItems } = useContext(CartContext);
 	return (
 		<div className={style.glow}>
 			<header className={style.wrapper}>
@@ -38,7 +40,8 @@ const Header = () => {
 					>
 						<div className={style.cartBox}>
 							<span className={style.cartSize}>
-								{size}
+								{/* {size} */}
+								{cartItems.length}
 							</span>
 							<RiShoppingCartLine />
 							<span>Cart</span>
