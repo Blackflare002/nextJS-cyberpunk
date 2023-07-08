@@ -21,6 +21,7 @@
 
 .Title {
 	font-size: 1rem;
+	font-family: "TronFont";
 }
 
 .Wrapper {
@@ -40,6 +41,6 @@
 	width: 40%;
 }
 
-.Wrapper * {
+/* .Wrapper * {
 	font-family: "Press Start 2P", cursive;
-}
+} */

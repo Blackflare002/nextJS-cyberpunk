@@ -35,7 +35,7 @@ const Header = () => {
 				</p>
 				<div>
 					<Link
-						href={`/cart`}
+						href={`/CartPage`}
 						className={style.styledLink}
 					>
 						<div className={style.cartBox}>

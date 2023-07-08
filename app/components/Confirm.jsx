@@ -1,33 +1,35 @@
+"use client";
 import { useContext } from "react";
 import { AppContext } from "./AppContext";
 import styles from "./Confirm.module.css";
+import "../styles/fonts.css";
 
 const Confirm = () => {
-	const { completedOrder } =
-		useContext(AppContext);
+	// const { completedOrder } =
+	// 	useContext(AppContext);
 	return (
 		<div className={styles.Wrapper}>
-			{completedOrder && (
-				<>
-					<div>
-						<ul>
-							<li className={styles.Item}>
-								<span className={styles.Title}>
-									Order completed
-								</span>
-								<div
-									className={styles.Dashed}
-								></div>
-								<span>.</span>
-							</li>
-							<li className={styles.Item}>
-								<span>.</span>
-								<div
-									className={styles.Dashed}
-								></div>
-								<span>.</span>
-							</li>
-							{completedOrder.items.map((el) => {
+			{/* {completedOrder && ( */}
+			<>
+				<div>
+					<ul>
+						<li className={styles.Item}>
+							<span className={styles.Title}>
+								Order completed - Thank You
+							</span>
+							<div
+								className={styles.Dashed}
+							></div>
+							<span>.</span>
+						</li>
+						<li className={styles.Item}>
+							<span>.</span>
+							<div
+								className={styles.Dashed}
+							></div>
+							<span>.</span>
+						</li>
+						{/* {completedOrder.items.map((el) => {
 								return (
 									<li className={styles.Item}>
 										<span>{el.name}</span>
@@ -53,28 +55,30 @@ const Confirm = () => {
 										</span>
 									</li>
 								);
-							})}
-							<li className={styles.Item}>
-								<span>.</span>
-								<div
-									className={styles.Dashed}
-								></div>
-								<span>.</span>
-							</li>
-							<li className={styles.Item}>
-								<span>.</span>
-								<Dashed></Dashed>
-								<span
+							})} */}
+						<li className={styles.Item}>
+							<span>.</span>
+							<div
+								className={styles.Dashed}
+							></div>
+							<span>.</span>
+						</li>
+						<li className={styles.Item}>
+							<span>.</span>
+							<div
+								className={styles.Dashed}
+							></div>
+							{/* <span
 									style={{ fontSize: "1rem" }}
 								>
 									Total: $
 									{completedOrder.totalCost}
-								</span>
-							</li>
-						</ul>
-					</div>
-				</>
-			)}
+								</span> */}
+						</li>
+					</ul>
+				</div>
+			</>
+			{/* )} */}
 		</div>
 	);
 };
