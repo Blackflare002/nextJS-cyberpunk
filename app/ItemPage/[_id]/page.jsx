@@ -147,7 +147,8 @@ const ItemInfo = ({ params }) => {
 														style.subtotalInput
 													}
 													min={1}
-													max={item.numInStock}
+													// max={item.numInStock}
+													max={1}
 													type="number"
 													value={numOfItems}
 													onChange={

@@ -56,7 +56,10 @@ const TrueCart = () => {
 			<ul>
 				{cartItems &&
 					cartItems.map((item) => (
-						<div key={item._id}>
+						<li
+							className={style.listItem}
+							key={item._id}
+						>
 							<p>{item.name}</p>
 							<p>{item.price}</p>
 							{/* <button
@@ -66,7 +69,7 @@ const TrueCart = () => {
 							>
 								Remove
 							</button> */}
-						</div>
+						</li>
 					))}
 				{size > 0 && (
 					<div className={style.SubtotalWrapper}>

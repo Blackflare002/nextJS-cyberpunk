@@ -74,14 +74,14 @@ const Items = ({ items, el }) => {
 								</p>
 								<button
 									className={styles.styledButton}
-									onClick={(ev) => {
-										ev.preventDefault();
-										ev.stopPropagation();
-										// addItemToCart(items);
-										// addToCart(product);
-										// removeFromCart(productId);
-										handleAddToCart;
-									}}
+									// onClick={(ev) => {
+									// 	ev.preventDefault();
+									// 	ev.stopPropagation();
+									// 	// addItemToCart(items);
+									// 	// addToCart(product);
+									// 	// removeFromCart(productId);
+									// 	// handleAddToCart;
+									// }}
 									disabled={
 										items.numInStock === 0
 											? true
@@ -94,7 +94,7 @@ const Items = ({ items, el }) => {
 									}
 								>
 									{items.numInStock > 0
-										? "Add to Cart"
+										? "See More"
 										: "Sold out"}
 								</button>
 							</div>

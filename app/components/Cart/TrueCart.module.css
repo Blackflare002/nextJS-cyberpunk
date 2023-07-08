@@ -28,8 +28,9 @@
 	margin-top: 10px;
 }
 
-/* .HeaderWrapper {
-} */
+.listItem {
+	margin: 8px 0;
+}
 
 .SubtotalWrapper {
 	display: flex;

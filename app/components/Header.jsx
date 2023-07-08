@@ -16,7 +16,7 @@ const Header = () => {
 		<div className={style.glow}>
 			<header className={style.wrapper}>
 				<Link
-					href="./"
+					href="/"
 					className={style.styledLink}
 				>
 					<div className={style.homeWrapper}>
