@@ -1,34 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hackerman - Next.js E-Commerce Website
 
-## Getting Started
+A recreation of my Concordia Full-Stack Web Development Bootcamp's final group project, this time made solo and in Next.js. A Cyberpunk-themed e-commerce website. Data provided by Concordia, concept by our original team, all functionality and styling done by me, this time around.
 
-First, run the development server:
+Original Team: Shane Phillips, Eric Chan, Olivier Nimal, Eddy Lachapelle.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Refer back to: https://github.com/Blackflare002/hackerman
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot (6)](https://user-images.githubusercontent.com/60205439/165153833-817a6da1-1372-41e3-acb5-9b8008b80e43.png)
+![Screenshot (7)](https://user-images.githubusercontent.com/60205439/165153838-0a567f13-be20-4e86-a3cf-03fc63249807.png)
+![Screenshot (8)](https://user-images.githubusercontent.com/60205439/165153851-77775593-de68-4d9e-a752-bad35d372d5d.png)
+![Screenshot (9)](https://user-images.githubusercontent.com/60205439/165153853-85d43336-79f3-49cd-8990-a078276a051e.png)
+![Screenshot (10)](https://user-images.githubusercontent.com/60205439/165153857-74f0c731-f7e5-4698-8073-18253c56c962.png)
