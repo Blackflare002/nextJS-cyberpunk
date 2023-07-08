@@ -4,9 +4,16 @@ import "../../styles/fonts.css";
 import data from "../../api/items/data.json";
 import companyData from "../../api/companies/companies.json";
 import bgImg from "../../../public/images/grid.jpg";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../components/CartContext";
 
 const ItemInfo = ({ params }) => {
+	const { addItemToCart } =
+		useContext(CartContext);
+	const handleAddToCart = () => {
+		addItemToCart(item);
+	};
+
 	const item = data.find(
 		(el) => el._id === Number(params._id)
 	);
@@ -192,6 +199,9 @@ const ItemInfo = ({ params }) => {
 										<div>
 											{item.numInStock !== 0 ? (
 												<button
+													onClick={
+														handleAddToCart
+													}
 													className={style.button}
 												>
 													Add to Cart

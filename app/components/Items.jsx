@@ -8,17 +8,26 @@ import { CartContext } from "./CartContext";
 // 	removeFromCart,
 // } from "./Cart/TrueCart";
 
-const Items = ({ items }) => {
+const Items = ({ items, el }) => {
 	// const {
 	// 	// items,
 	// 	actions: { addItemToCart },
 	// } = useContext(AppContext);
-	const { dispatch } = useContext(CartContext);
-	const handleAddToCart = (el) => {
-		dispatch({
-			type: "ADD_TO_CART",
-			payload: el,
-		});
+
+	// const { dispatch, addItemToCart } =
+	// 	useContext(CartContext);
+
+	const { addItemToCart } =
+		useContext(CartContext);
+
+	// const handleAddToCart = () => {
+	// 	dispatch({
+	// 		type: "ADD_TO_CART",
+	// 		payload: el,
+	// 	});
+	// };
+	const handleAddToCart = () => {
+		addItemToCart(el);
 	};
 	return (
 		<div>
@@ -71,7 +80,7 @@ const Items = ({ items }) => {
 										// addItemToCart(items);
 										// addToCart(product);
 										// removeFromCart(productId);
-										handleAddToCart(el);
+										handleAddToCart;
 									}}
 									disabled={
 										items.numInStock === 0
